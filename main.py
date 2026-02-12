@@ -11,10 +11,6 @@ class Client:
     def connect(self):
         ssh_command = f"ssh {self.name}@{self.host} {self.passwd}"
         process = subprocess.Popen([
-            'gnome-terminal',
-            '--',
-            'bash',
-            '-c',
             ssh_command
         ])
         print("Окно открыто, а я работаю дальше!")
