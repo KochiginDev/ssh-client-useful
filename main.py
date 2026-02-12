@@ -9,7 +9,7 @@ class Client:
         self.passwd = passwd
         self.host = host
     def connect(self):
-        ssh_command = f"ssh {self.name} {self.passwd}"
+        ssh_command = f"ssh {self.name}@{self.host} {self.passwd}"
         process = subprocess.Popen([
             'gnome-terminal',
             '--',
